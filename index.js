@@ -1,3 +1,5 @@
+import { createFileLevelUniqueName } from "typescript";
+
 /**
  * Returns the sum of the given numbers.
  * @param {number} a the first number
@@ -6,7 +8,7 @@
  */
 export const sum = (a, b) => {
   // TODO: implement here
-
+return a+b;
 }
 
 /**
@@ -20,7 +22,11 @@ export const sum = (a, b) => {
  */
 export const map = (arr, callback) => {
   // TODO: implement here
-
+  const new_arr = []
+  for(let i=0;i<arr.length;i++){
+    new_arr.push(callback(arr[i], i))
+  }
+  return new_arr;
 }
 
 /**
@@ -33,7 +39,14 @@ export const map = (arr, callback) => {
  */
 export const filter = (arr, callback) => {
   // TODO: implement here
-
+ const list =[];
+  for(let i=0; i<arr.length;i++){
+    const result= callback(arr[i],i)
+    if(result){
+      list.push(arr[i])
+    }
+  }
+  return list
 }
 
 /**
@@ -53,5 +66,11 @@ export const filter = (arr, callback) => {
  */
 export const reduce = (arr, callback, initialValue) => {
   // TODO: implement here
+  let init=initialValue;
+  for(let i=0; i< arr.length;i++){
+  init=callback(init,arr[i],i)
+    
+  }
+  return init ;
 
 }

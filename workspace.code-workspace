@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\261218-2563-2-hw1-algradea\\hw"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\Njs"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "lab-01-danwristband"
+	}
+}
